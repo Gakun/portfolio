@@ -15,11 +15,56 @@
 # limitations under the License.
 #
 import webapp2
+import os
+import jinja2
+import logging
+
+
+JINJA_ENVIRONMENT = jinja2.Environment(
+    loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
+    extensions=['jinja2.ext.autoescape'],
+    autoescape=True)
+
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        self.response.write('Hello world!')
+        path = self.request.path
+        try:
+            template = JINJA_ENVIRONMENT.get_template('templates' + path + '.html')
+        except:
+            template = JINJA_ENVIRONMENT.get_template('templates/index.html')
+
+        if path == '/' or path == '/index':
+            self.response.write(template.render({"title": "Home"}))
+        elif path == '/travel':
+            self.response.write(template.render({"title": "Travel"}))
+        elif path == '/pet':
+            self.response.write(template.render({"title": "Pet"}))
+
+
+class LoginHandler(webapp2.RequestHandler):
+    def get(self):
+        template = JINJA_ENVIRONMENT.get_template('templates/login.html')
+        self.response.write(template.render({"title": "Login"}))
+
+    def post(self):
+        user = self.request.get('name')
+        pw = self.request.get('pw')
+        logging.info("POST: Input username is " + user)
+        logging.info("POST: Input password is " + pw)
+        if user == 'Colleen' and pw == "pass":
+            template = JINJA_ENVIRONMENT.get_template('templates/loginsuccess.html')
+            self.response.write(template.render({"title": "Login"}))
+        else:
+            msg = 'Bad credentials. Try again.'
+            template = JINJA_ENVIRONMENT.get_template('templates/login.html')
+            self.response.write(template.render({"title": "Login", "msg": msg}))
+
 
 app = webapp2.WSGIApplication([
-    ('/', MainHandler)
+    ('/', MainHandler),
+    ('/index', MainHandler),
+    ('/travel', MainHandler),
+    ('/pet', MainHandler),
+    ('/login', LoginHandler)
 ], debug=True)

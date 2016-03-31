@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+<head>
+    <meta charset = 'UTF-8'>
+    <title>Jing Wang - {{title}}</title>
+</head>
+
+<body>
+    <header>
+        {% if active_page == 'index' %}
+            <h1>Jing Wang</h1>
+            <h2>{{title}}</h2>
+        {% else %}
+            <h1>{{title}}</h1>
+        {% endif %}
+
+        <nav>
+            <a href="index">
+                {% if active_page == 'index' %}HOME{% else %}Home{% endif %}</a>
+            <a href="pet">
+                {% if active_page == 'pet' %}PET{% else %}Pet{% endif %}</a>
+            <a href="travel">
+                {% if active_page == 'travel' %}TRAVEL{% else %}Travel{% endif %}</a>
+            <a href="login">
+                {% if active_page == 'login' %}LOGIN{% else %}Login{% endif %}</a>
+        </nav>
+    </header>
+    {% block content %}
+    Error: block should be replaced
+    {% endblock %}
+    <footer>
+        <p>Copyright &copy; Jing Wang from the University of Michgan <a href="http://www.engin.umich.edu/ioe">Department of IOE</a></p>
+    </footer>
+
+</body>
+
+</html>

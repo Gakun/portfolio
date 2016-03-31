@@ -1,26 +1,104 @@
 
-/* Remove the navbar's default margin-bottom and rounded borders */ 
 body{
     padding-top: 51px;
 }
+
 .navbar {
-  margin-bottom: 0;
-  border-radius: 0;
-}
-
-.nav-adjust{
+    margin-bottom: 0;
+    border-radius: 0;
     background-color: #191919; opacity: 0.8; filter: alpha(opacity=50);
-}
-
-/* Add a gray background color and some padding to the footer */
-footer {
-  background-color: #f2f2f2;
-  padding: 25px;
 }
 
 header .jumbotron{
     background-image: url("chicago1.jpg");
     background-size: cover;
     height: 20em;
+}
+
+header .jumbotron h1{
+    text-shadow: 2px 2px 5px #D6D1CB;
+}
+
+/*footer css*/
+footer {
+    background-color: #292c2f;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    text-align: left;
+    font: 16px sans-serif;
+    color: white;
+    padding: 55px 50px;
+}
+
+.footer-left #logo{
+    color:  #ffffff;
+    font: normal 36px 'Cookie', cursive;
+    margin: 0;
+}
+
+.footer-left #logo span{
+    color:  #5383d3;
+}
+
+.footer-links{
+    margin: 20px 0 12px;
+    padding: 0;
+}
+
+.footer-links a{
+    color:  #ffffff;
+}
+
+.footer-name{
+    color:  #8f9296;
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 2em;
+}
+
+.footer-left .footer-icons{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.footer-left .footer-icons a{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color:  #33383b;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+.footer-right i{
+    background-color:  #33383b;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 38px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.footer-right p{
+    display: inline-block;
+    color: #ffffff;
+    vertical-align: middle;
+    margin:0;
+}
+
+.footer-right p span{
+    display:block;
+    font-weight: normal;
+    font-size:14px;
+    line-height:2;
 }
 

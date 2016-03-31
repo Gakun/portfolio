@@ -1,0 +1,26 @@
+
+/* Remove the navbar's default margin-bottom and rounded borders */ 
+body{
+    padding-top: 51px;
+}
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+.nav-adjust{
+    background-color: #191919; opacity: 0.8; filter: alpha(opacity=50);
+}
+
+/* Add a gray background color and some padding to the footer */
+footer {
+  background-color: #f2f2f2;
+  padding: 25px;
+}
+
+header .jumbotron{
+    background-image: url("chicago1.jpg");
+    background-size: cover;
+    height: 20em;
+}
+

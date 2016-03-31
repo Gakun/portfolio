@@ -36,16 +36,16 @@ class MainHandler(webapp2.RequestHandler):
 
         if path == '/' or path == '/index':
             self.response.write(template.render({"title": "Home"}))
-        elif path == '/travel':
-            self.response.write(template.render({"title": "Travel"}))
-        elif path == '/pet':
-            self.response.write(template.render({"title": "Pet"}))
+        elif path == '/resume':
+            self.response.write(template.render({"title": "Resume"}))
+        elif path == '/gallery':
+            self.response.write(template.render({"title": "Gallery"}))
 
 
-class LoginHandler(webapp2.RequestHandler):
+class ContactHandler(webapp2.RequestHandler):
     def get(self):
-        template = JINJA_ENVIRONMENT.get_template('templates/login.html')
-        self.response.write(template.render({"title": "Login"}))
+        template = JINJA_ENVIRONMENT.get_template('templates/contact.html')
+        self.response.write(template.render({"title": "contact"}))
 
     def post(self):
         user = self.request.get('name')
@@ -64,7 +64,7 @@ class LoginHandler(webapp2.RequestHandler):
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
     ('/index', MainHandler),
-    ('/travel', MainHandler),
-    ('/pet', MainHandler),
-    ('/login', LoginHandler)
+    ('/resume', MainHandler),
+    ('/gallery', MainHandler),
+    ('/contact', ContactHandler)
 ], debug=True)

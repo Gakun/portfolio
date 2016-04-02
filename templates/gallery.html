@@ -1,10 +1,97 @@
 {% set active_page = 'gallery' %}
 {% extends "templates/base.html" %}
 {% block content %}
-  <p>This page is the Pet section of my sample portfolio.</p>
-  <figure>
-    <img src = "static/gakun.jpeg" alt = "Photo of Gakun" height = "400" width ="300">
-    <figcaption>Gakun is a three years old British Shorthair cat.</figcaption>
-  </figure>
+
+<div class="container gallery">
+
+    <!-- Page Header -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Gallery
+                <small>My Photographic Work</small>
+            </h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 portfolio-item">
+            <h3>
+                Sunset in Chicago
+            </h3>
+            <p>As the sun sinks over horizon, the city is dyed gold</p>
+            <a href="static/gallery/1.jpg">
+                <img class="img-responsive" src="static/gallery/1.jpg" alt="sunset">
+            </a>
+        </div>
+        <div class="col-md-4 portfolio-item">
+            <h3>
+                Project Name
+            </h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+            <a href="static/gallery/2.jpg">
+                <img class="img-responsive" src="static/gallery/2.jpg" alt="">
+            </a>
+        </div>
+        <div class="col-md-4 portfolio-item">
+            <h3>
+                Project Name
+            </h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+            <img class="img-responsive" src="static/gallery/3.jpg" alt="">
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <!-- Projects Row -->
+    <div class="row">
+        <div class="col-md-4 portfolio-item">
+            <h3>
+                Project Name
+            </h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+            <img class="img-responsive" src="static/gallery/4.jpg" alt="">
+        </div>
+        <div class="col-md-4 portfolio-item">
+            <h3>
+                Project Name
+            </h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+            <img class="img-responsive" src="static/gallery/5.jpg" alt="">
+        </div>
+        <div class="col-md-4 portfolio-item">
+            <h3>
+                Project Name
+            </h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+            <img class="img-responsive" src="static/gallery/6.jpg" alt="">
+        </div>
+    </div>
+
+    <!-- Projects Row -->
+    <div class="row">
+        <div class="col-md-4 portfolio-item">
+            <h3>
+                Project Name
+            </h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+            <img class="img-responsive" src="static/gallery/7.jpg" alt="">
+        </div>
+        <div class="col-md-4 portfolio-item">
+            <h3>
+                Project Name
+            </h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+            <img class="img-responsive" src="static/gallery/8.jpg" alt="">
+        </div>
+        <div class="col-md-4 portfolio-item">
+            <h3>
+                Project Name
+            </h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+            <img class="img-responsive" src="static/gallery/9.jpg" alt="">
+        </div>
+    </div>
+
+</div>
 
 {% endblock %}

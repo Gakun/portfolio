@@ -1,8 +1,35 @@
 {% set active_page = 'contact' %}
 {% extends "templates/base.html" %}
 {% block content %}
-{{msg}}
-    <form method="post">
+<div class="container contact">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="page-header">Contact
+                <small>With Me</small>
+            </h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="adress">
+                <h2>Address</h2>
+                <p>1831 Lake Lila Ln</p>
+                <p>Ann Arbor, United State</p>
+            </div>
+            <div class="information">
+                <p>Phone: <span>(+1)734-277-5627</span></p>
+                <p>Email: <span>jingwa@umich.edu</span></p>
+            </div>
+        </div>
+        <div class="col-md-4" id="map-container">
+
+        </div>
+    </div>
+</div>
+
+
+<!--     <form method="post">
         <label>name: <input name="name" placeholder="Enter your name"></label>
         <br/>
         <label>Email: <input name="mail" placeholder="Enter your email"></label>
@@ -15,5 +42,5 @@
         <br/>
         <input type="submit" value="Send"/>
     </form>
-
+ -->
 {% endblock %}

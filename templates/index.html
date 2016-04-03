@@ -1,49 +1,42 @@
 {% set active_page = "index" %}
 {% extends "templates/base.html" %}
 {% block content %}
-    
-<div class="container-fluid bg-3 text-center">    
-  <h3>Some of my Work</h3><br>
-  <div class="row">
-    <div class="col-sm-3">
-      <p>Some text..</p>
-      <img src="http://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+<div class="jumbotron about">
+  <div class="container">
+    <div class="left">
+      <h2>About Me</h2>      
+      <p>User Research Engineer</p>
     </div>
-    <div class="col-sm-3"> 
-      <p>Some text..</p>
-      <img src="http://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-3"> 
-      <p>Some text..</p>
-      <img src="http://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-3">
-      <p>Some text..</p>
-      <img src="http://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+    <div class="right">
+      <h2>Goal</h2>
+      <p>"Become Bridge Between Users and Products"</p>
     </div>
   </div>
-</div><br>
+</div>  
 
-<div class="container-fluid bg-3 text-center">    
+<div class="jumbotron text-center detail">
+  <div class="container"><h2>My Favorite Things in the World</h2></div>
+      
   <div class="row">
-    <div class="col-sm-3">
-      <p>Some text..</p>
-      <img src="http://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+    <div class="col-md-4">    
+      <img src="static/travel.jpg" class="img-responsive" style="width:100%" alt="travel">
+      <h3>Photography</h3>
+      <p>I like to travel<p>  
     </div>
-    <div class="col-sm-3"> 
-      <p>Some text..</p>
-      <img src="http://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+
+    <div class="col-md-4"> 
+      <img src="static/longboard.jpg" class="img-responsive" style="width:100%" alt="longboard">
+      <h3>Longboard</h3>
+      <p>I like Longboard</p>
     </div>
-    <div class="col-sm-3"> 
-      <p>Some text..</p>
-      <img src="http://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-3">
-      <p>Some text..</p>
-      <img src="http://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+
+    <div class="col-md-4"> 
+      <img src="static/pet.jpg" class="img-responsive" style="width:100%" alt="cat">
+      <h3>Pet</h3>
+      <p>Gakun is a three-years old British short-hair cat</p>
     </div>
   </div>
-</div><br><br>
+</div>
 
 
 {% endblock %}

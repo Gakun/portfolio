@@ -50,27 +50,27 @@ class ContactHandler(webapp2.RequestHandler):
     def get(self):
         self.response.out.write(self.template.render())
 
-    def post(self):
-        # takes input from user
-        userMail = self.request.get("mail")
-        subject = self.request.get("subject")
-        name = self.request.get("name")
-        userMessage = self.request.get("message")
-        message = mail.EmailMessage(sender=userMail, subject=subject)
+    # def post(self):
+    #     # takes input from user
+    #     userMail = self.request.get("mail")
+    #     subject = self.request.get("subject")
+    #     name = self.request.get("name")
+    #     userMessage = self.request.get("message")
+    #     message = mail.EmailMessage(sender=userMail, subject=subject)
 
-        # not tested
-        if not mail.is_email_valid(userMail):
-            self.response.out.write("Wrong email! Check again!")
+    #     # not tested
+    #     if not mail.is_email_valid(userMail):
+    #         self.response.out.write("Wrong email! Check again!")
 
-        message.to = "jingwa@umich.edu"
-        message.body = """Thank you!
-            You have entered following information:
-            Your mail: %s
-            Subject: %s
-            Name: %s
-            Message: %s""" % (userMail, subject, name, userMessage)
-        message.send()
-        self.response.out.write("Message sent!")
+    #     message.to = "jingwa@umich.edu"
+    #     message.body = """Thank you!
+    #         You have entered following information:
+    #         Your mail: %s
+    #         Subject: %s
+    #         Name: %s
+    #         Message: %s""" % (userMail, subject, name, userMessage)
+    #     message.send()
+    #     self.response.out.write("Message sent!")
 
 
 app = webapp2.WSGIApplication([

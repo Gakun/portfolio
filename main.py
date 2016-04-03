@@ -17,7 +17,9 @@
 import webapp2
 import os
 import jinja2
-import logging
+from google.appengine.api import mail
+from google.appengine.api import users
+
 
 
 JINJA_ENVIRONMENT = jinja2.Environment(
@@ -43,22 +45,32 @@ class MainHandler(webapp2.RequestHandler):
 
 
 class ContactHandler(webapp2.RequestHandler):
+    template = JINJA_ENVIRONMENT.get_template('templates/contact.html')
+
     def get(self):
-        template = JINJA_ENVIRONMENT.get_template('templates/contact.html')
-        self.response.write(template.render({"title": "contact"}))
+        self.response.out.write(self.template.render())
 
     def post(self):
-        user = self.request.get('name')
-        pw = self.request.get('pw')
-        logging.info("POST: Input username is " + user)
-        logging.info("POST: Input password is " + pw)
-        if user == 'Colleen' and pw == "pass":
-            template = JINJA_ENVIRONMENT.get_template('templates/loginsuccess.html')
-            self.response.write(template.render({"title": "Login"}))
-        else:
-            msg = 'Bad credentials. Try again.'
-            template = JINJA_ENVIRONMENT.get_template('templates/login.html')
-            self.response.write(template.render({"title": "Login", "msg": msg}))
+        # takes input from user
+        userMail = self.request.get("mail")
+        subject = self.request.get("subject")
+        name = self.request.get("name")
+        userMessage = self.request.get("message")
+        message = mail.EmailMessage(sender=userMail, subject=subject)
+
+        # not tested
+        if not mail.is_email_valid(userMail):
+            self.response.out.write("Wrong email! Check again!")
+
+        message.to = "jingwa@umich.edu"
+        message.body = """Thank you!
+            You have entered following information:
+            Your mail: %s
+            Subject: %s
+            Name: %s
+            Message: %s""" % (userMail, subject, name, userMessage)
+        message.send()
+        self.response.out.write("Message sent!")
 
 
 app = webapp2.WSGIApplication([

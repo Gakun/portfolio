@@ -1,6 +1,7 @@
 
 body{
     padding-top: 51px;
+    overflow-x:hidden;
 }
 
 .navbar {

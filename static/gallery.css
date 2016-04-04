@@ -2,6 +2,7 @@
 .gallery{
     padding-left: 0;
     padding-right: 0;
+    width:100%;
 }
 
 .gallery .page-header{
@@ -44,6 +45,10 @@
 .grey-third{
     background-color: #767676;
     padding-right: 0;
+}
+
+.adjust:{
+  padding-right: 0;
 }
 
 }

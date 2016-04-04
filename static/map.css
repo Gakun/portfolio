@@ -1,6 +1,12 @@
 #map-container{
     height: 20em;
-    width: 20em;
+    width: 90%;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.contact{
+margin-bottom: 40px;
 }
 
 .contact h1{
@@ -12,11 +18,36 @@
 
 }
 
+@media (min-width: 768px) and (max-width: 992px){
+
+.contact{
+width: 90%;
+margin-bottom: 40px;
+}
+
+.contact h1{
+    text-align: left;
+}
+
+.address, .information{
+    display: inline-block;
+    width: 50%;
+}
+.information{
+    float: right;
+}
+
+#map-container{
+    height: 25em;
+}
+
+}
 
 @media (min-width: 992px){
 
 .contact{
 width: 60%;
+margin-bottom: 40px;
 }
 
 .contact h1{
@@ -25,7 +56,7 @@ width: 60%;
 
 #map-container{
     height: 30em;
-    width: 30em;
+    width: 60%;
 }
 
 }

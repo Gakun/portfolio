@@ -1,0 +1,20 @@
+.resume h1{
+    text-align: center;
+    font-size: 2em;
+}
+.resume .text{
+    font-size: 1.3em;
+}
+
+.resume .text{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+@media (min-width: 992px){
+    .resume h1{
+        text-align: left;
+        font-size: 2.5em;
+    }
+}

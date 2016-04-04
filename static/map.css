@@ -18,6 +18,13 @@ margin-bottom: 40px;
 
 }
 
+iframe{
+    overflow: hidden;
+    width:100%;
+    border-width:0;
+    height: 600px;
+}
+
 @media (min-width: 768px) and (max-width: 992px){
 
 .contact{

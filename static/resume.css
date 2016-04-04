@@ -1,6 +1,14 @@
+@media (max-width: 768px){
+    .resume h1{
+        font-size: 2em;
+    }
+    .resume .text{
+         font-size: 1em;
+    }
+}
+
 .resume h1{
     text-align: center;
-    font-size: 2em;
 }
 .resume .text{
     font-size: 1.3em;

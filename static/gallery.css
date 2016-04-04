@@ -8,6 +8,11 @@
     text-align: center;
 }
 
+.adjust{
+    padding-right: 0;
+    padding-left: 0;
+}
+
 .gallery .page-header small{
     display: block;
     margin-top: 1em;
@@ -22,6 +27,9 @@
     padding-top: 10%;
     color: white;
 }
+.portfolio-item{
+    padding-right: 0;
+}
 
 .grey-first{
     background-color: #1B1B1B;
@@ -29,10 +37,13 @@
 
 .grey-second{
     background-color: #373737;
+    padding-right: 0;
+
 }
 
 .grey-third{
     background-color: #767676;
+    padding-right: 0;
 }
 
 }
@@ -62,20 +73,60 @@
 
 .grey-first{
     background-color: #1B1B1B;
+    padding-left: 0;
+    padding-right:0;
 }
 
 .grey-second{
     background-color: #373737;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .grey-third{
     background-color: #767676;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 }
+
 
 @media (min-width: 992px){
 .gallery{
     margin-bottom: 40px;
 }
+
+.portfolio-item img{
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+}
+
+.description {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding-top: 4em;
+  background: rgba(100, 100, 100, 0.72);
+  color: #fff;
+
+  visibility: hidden;
+  opacity: 0;
+
+  /*remove comment if you want a gradual transition between states
+  -webkit-transition: visibility opacity 0.2s;
+  */
+}
+
+.portfolio-item:hover .description {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
 }

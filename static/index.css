@@ -8,6 +8,9 @@
     color: white;
     width:100%;
 }
+.about .rightside{
+  text-align: right;
+}
 
 .detail{
     margin-top: 0;
@@ -44,12 +47,60 @@
   text-align: center;
 }
 
-@media (min-width: 768px) and (max-width: 992px){
-  .about .rightside{
-    text-align: right;
-    margin-top: 4em;
+.first, .second, .third{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.extra{
+  margin-right: 0;
+  margin-left: 0;
+}
+
+
+@media (max-width:768px){
+  .about{
+    height: 25em;
+  }
+  .about h2, .about p{
+    font-size: 140%;
   }
 
+  .first{
+    background-color: #525252;
+    color: white;
+  }
+
+  .second{
+    background-color: #232323;
+    color: white;
+  }
+
+  .third{
+    background-color: #525252;
+    color: white;
+  }
+
+  .extra .text{
+    padding-bottom: 1em;
+  }
+  .extra .text p{
+    margin-bottom: 0;
+    font-size: 100%;
+    padding-bottom: 1em;
+  }
+
+  .extra .text h3{
+    font-size: 140%;
+  }
+
+
+  .detail{
+    padding-bottom: 0;
+  }
+
+}
+@media (min-width: 768px) and (max-width: 992px){
   .detail h2{
     position: relative;
     margin-bottom: 2.5em;
@@ -155,5 +206,10 @@
   }
   .lg-shadow{
     box-shadow: 7px 7px 5px #7C7C7C;
+  }
+
+  .first, .second, .third{
+    padding-left: 1em;
+    padding-right: 1em;
   }
 }

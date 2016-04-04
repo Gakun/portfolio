@@ -48,7 +48,7 @@ class ContactHandler(webapp2.RequestHandler):
     template = JINJA_ENVIRONMENT.get_template('templates/contact.html')
 
     def get(self):
-        self.response.out.write(self.template.render())
+        self.response.out.write(self.template.render({"title": "Contact"}))
 
     # def post(self):
     #     # takes input from user

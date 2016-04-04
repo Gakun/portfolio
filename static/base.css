@@ -25,9 +25,10 @@ header .jumbotron h1{
     font-family: "futura", sans-serif; 
 }
 
-header .jumbotron span{
-    color:white;
+header .jumbotron p{
+    text-shadow: 1px 1px 3px #FFFFFF;
 }
+
 
 /*footer css*/
 
@@ -119,5 +120,16 @@ footer {
         padding-right: 0;
         padding-left: 0;
         text-align: center;
+    }
+  /*  header .jumbotron span{
+    color:white;
+    }*/
+
+}
+
+@media (min-width:768px){
+    header .jumbotron{
+        height: 25em;
+    }
 
 }

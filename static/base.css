@@ -20,7 +20,8 @@ header .jumbotron{
 }
 
 header .jumbotron h1{
-    text-shadow: 2px 2px 5px #D6D1CB;
+    text-shadow: 5px 5px 5px #D6D1CB;
+    font-family: "futura", sans-serif; 
 }
 
 /*footer css*/

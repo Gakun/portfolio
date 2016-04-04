@@ -1,3 +1,81 @@
+@media(max-width: 768px){
+.gallery{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.gallery .page-header{
+    text-align: center;
+}
+
+.gallery .page-header small{
+    display: block;
+    margin-top: 1em;
+}
+.description{
+    text-align: center;
+    padding-bottom: 1em;
+
+}
+
+.description{
+    padding-top: 10%;
+    color: white;
+}
+
+.grey-first{
+    background-color: #1B1B1B;
+}
+
+.grey-second{
+    background-color: #373737;
+}
+
+.grey-third{
+    background-color: #767676;
+}
+
+}
+
+
+@media (min-width: 768px) and (max-width: 992px){
+
+.gallery{
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+
+}
+
+.gallery .page-header{
+    width: 90%;
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+    text-align: center;
+}
+
+.description{
+    padding-top: 10%;
+    color: white;
+}
+
+.grey-first{
+    background-color: #1B1B1B;
+}
+
+.grey-second{
+    background-color: #373737;
+}
+
+.grey-third{
+    background-color: #767676;
+}
+
+}
+
+@media (min-width: 992px){
 .gallery{
     margin-bottom: 40px;
+}
 }
